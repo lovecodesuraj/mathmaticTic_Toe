@@ -36,6 +36,7 @@ const setStates=(game,setGame,used,setUsed,message,setMessage,name,value)=>{
   
         setMessage("");
         document.getElementById(name).readOnly = true;
+        console.log(game)
         getValue(game,used);
       }
 }

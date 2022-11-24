@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 
 
 
@@ -60,8 +61,9 @@ const fun1 = (game, used) => {
 
 
     const funDown = () => {
+        var possibilitiesOfFunDown = [];
         if (game.d && game.g) {
-            var possibilitiesOfFunDown = [];
+            
             const sum = game.d + game.g;
             //checking used or not
             var val = 15 - sum;
@@ -174,15 +176,19 @@ const fun1 = (game, used) => {
     const possRight = funRight();
     const possDown = funDown();
     const possDia = funDia();
+  
+     var filter1=possRight.filter(value=> possDown.includes(value));
+     var filter2=filter1.filter(value=>possDia.includes(value));
 
 
 
-    const totalPossibleMoves = [...possDia, ...possDown, ...possRight];
+
+    const totalPossibleMoves = filter2;
   var result;
     if (totalPossibleMoves.length === 0) {
         result=0;
     } else {
-         result = totalPossibleMoves.filter(move => move > 0);
+         result = totalPossibleMoves.filter(move => move > 0 && move <10);
         result=result[0];
     }
    
