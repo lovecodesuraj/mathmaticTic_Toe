@@ -2,17 +2,33 @@ import './index.css';
 import React from "react";
 import { useState } from "react";
 import setStates from './js/setStates';
+import getValue from './js';
 
 function Game() {
   const [used, setUsed] = useState([]);
   const [game, setGame] = useState({ a: null,b: null, c: null, d: null,  e: null,f: null,g: null,h: null,i: null});
   const [message, setMessage] = useState("");
-  const handleChange = (e) => {
+  const handleChange = async (e)  => {
     e.preventDefault();
     const value = e.target.value;
     const name = e.target.name;
     setStates(game,setGame,used,setUsed,message,setMessage,name,value);
+
   }
+
+
+  const aiTurn=(e)=>{
+    e.preventDefault();
+    getValue(game,setGame,used,setUsed);
+    const arr= document.querySelectorAll(".input");
+    arr.forEach(input=>{
+        if(!input.value){
+       input.readOnly=false;
+        }
+    })
+  }
+  
+
 
   return (
     <>
@@ -22,6 +38,7 @@ function Game() {
           <button className='attack'>ATTACK</button>
           <button className='defend'>DEFEND</button>
         </div>
+        <button onClick={aiTurn}>Start AI</button>
         <div className='turn'><h4>user Turn</h4></div>
         <div className='message center' >{message}</div>
         <div className="gameBox center" id='gameBox'>
@@ -42,6 +59,7 @@ function Game() {
           </div>
 
         </div>
+      
       </div>
 
     </>
