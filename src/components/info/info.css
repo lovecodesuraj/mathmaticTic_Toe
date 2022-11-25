@@ -1,0 +1,26 @@
+.info{
+    width: 100vw;
+    height: 100vh;
+    background-color:#26A47F;
+    flex-direction: column;
+    justify-content: center;
+}
+.info h3{
+  font-size: 50px;
+  text-align: center;
+  color: aliceblue;
+  margin: 30px;
+}
+.info p{
+    width: 60%;
+    text-align: center;
+    color: azure;
+    margin: 0 0 20px 0;
+}
+.info .link{
+   text-decoration: none;
+   font-size: 25px;
+   border-radius: 10px;
+   padding: 10px 20px;
+   background-color: #fff;
+}

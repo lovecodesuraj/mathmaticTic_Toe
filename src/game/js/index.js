@@ -1,7 +1,7 @@
 import { useLayoutEffect } from "react";
 
 
-import fun from "../../funs/fun";
+import fun from "./fun.js";
 import checkWinCondition from "./checkWinCondition";
 
 

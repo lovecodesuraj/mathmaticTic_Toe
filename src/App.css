@@ -8,17 +8,35 @@
   justify-content: space-evenly;
    align-items: center;
 }
+.info{
+  color: gray;
+}
 
 .game{
   flex-direction: column;
 }
+
+.header{
+  flex-direction: column;
+  background-color: #F7D047;
+  height: 200px;
+}
+.timer{
+  height: 70px;
+  width: 20%;
+  flex-direction: row;
+}
+.timer p{
+  font-size: 25;
+  text-align: center;
+}
+
 .message{
   height: 70px;
 }
 .gameBox{
   width: 600px;
   height: 600px;
-  background-color: grey;
   flex-direction: column;
 }
 .row{
@@ -30,7 +48,6 @@
 .input{
   width: 30%;
   height: 90%;
-  background-color: #fff;
   font-size: 60px;
   text-align: center; 
 }

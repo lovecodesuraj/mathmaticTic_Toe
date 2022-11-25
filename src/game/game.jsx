@@ -2,12 +2,16 @@ import './game.css';
 import React from "react";
 import { useState } from "react";
 import setStates from './js/setStates';
-import getValue from './js';
+import getValue from './js/index';
+import Header from './header';
 
 function Game() {
   const [used, setUsed] = useState([]);
   const [game, setGame] = useState({ a: null,b: null, c: null, d: null,  e: null,f: null,g: null,h: null,i: null});
   const [message, setMessage] = useState("");
+  
+
+
   const handleChange = async (e)  => {
     e.preventDefault();
     var value = e.target.value;
@@ -34,14 +38,8 @@ function Game() {
 
   return (
     <>
+        {/* < Header /> */}
       <div className='game center' >
-        {/* <div className='heading'><h1>MathematTic Tac Toe</h1></div> */}
-        {/* <div className='mode'>
-          <button className='attack'>ATTACK</button>
-          <button className='defend'>DEFEND</button>
-        </div> */}
-       
-        <div className='turn'><h4>user Turn</h4></div>
         <div className='message center' >{message}</div>
         <div className="gameBox center" id='gameBox'>
           <div className='row center'>
@@ -59,7 +57,7 @@ function Game() {
             <input id="h" type="number" className="input" name="h" onChange={handleChange} value={game.h} />
             <input id="i" type="number" className="input" name="i" onChange={handleChange} value={game.i} />
           </div>
-          <button onClick={aiTurn} className="confirmBtn">Start AI</button>
+          <button onClick={aiTurn} className="confirmBtn">Confirm</button>
         </div>
       
       </div>
