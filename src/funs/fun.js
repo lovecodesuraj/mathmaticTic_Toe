@@ -25,7 +25,7 @@ const fun= (cell1,cell2,used) => {
 
         //for x+9+cell1<15
 
-        for (var i = 15 - cell1 - 1 - 1; i >= 1; i--) {
+        for (var i = 15 - cell1 - 9 - 1; i >= 1; i--) {
             possibleValues.push(i);
         }
 
@@ -38,7 +38,7 @@ const fun= (cell1,cell2,used) => {
 
         //for x+9+cell2<15
 
-        for (var i = 15 - cell2 - 1 - 1; i >= 1; i--) {
+        for (var i = 15 - cell2 - 9 - 1; i >= 1; i--) {
             possibleValues.push(i);
         }
     }

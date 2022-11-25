@@ -10,8 +10,10 @@ function Game() {
   const [message, setMessage] = useState("");
   const handleChange = async (e)  => {
     e.preventDefault();
-    const value = e.target.value;
+    var value = e.target.value;
     const name = e.target.name;
+    value=parseInt(value);
+    console.log(value)
     setStates(game,setGame,used,setUsed,message,setMessage,name,value);
 
   }
@@ -33,11 +35,11 @@ function Game() {
   return (
     <>
       <div className='game center'>
-        <div className='heading'><h1>MathematTic Tac Toe</h1></div>
-        <div className='mode'>
+        {/* <div className='heading'><h1>MathematTic Tac Toe</h1></div> */}
+        {/* <div className='mode'>
           <button className='attack'>ATTACK</button>
           <button className='defend'>DEFEND</button>
-        </div>
+        </div> */}
         <button onClick={aiTurn}>Start AI</button>
         <div className='turn'><h4>user Turn</h4></div>
         <div className='message center' >{message}</div>

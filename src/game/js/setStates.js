@@ -1,6 +1,6 @@
 import getValue from "./index";
 
-const setStates=async (game,setGame,used,setUsed,message,setMessage,name,value)=>{
+const setStates= (game,setGame,used,setUsed,message,setMessage,name,value)=>{
     if (value > 9 || value < 1) {
         setMessage("invalid input : input must be in the range of 1 to 9");
         setGame(prev => {
