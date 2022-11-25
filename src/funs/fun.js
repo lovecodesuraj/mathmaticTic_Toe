@@ -8,11 +8,14 @@ const fun= (cell1,cell2,used) => {
 
         //checking winning situation
         if (val > 0 && val < 10 && (!used.includes(val))) {
-            return val;
+            console.log("returned value ",val)
+            possibleValues.push(val);
+            return possibleValues;
         }
         for(var i=1;i<10;i++){
             possibleValues.push(i);
         }
+        console.log("possibilities for both entries",possibleValues);
 
     }
     else if (cell1) {
@@ -28,6 +31,7 @@ const fun= (cell1,cell2,used) => {
         for (var i = 15 - cell1 - 9 - 1; i >= 1; i--) {
             possibleValues.push(i);
         }
+        console.log("possibilities for first entry",possibleValues);
 
     }
     else if (cell2) {
@@ -41,11 +45,14 @@ const fun= (cell1,cell2,used) => {
         for (var i = 15 - cell2 - 9 - 1; i >= 1; i--) {
             possibleValues.push(i);
         }
+        console.log("possibilities for second entry",possibleValues);
     }
     else {
         for (i = 1; i < 10; i++)
-            possibleValues.push(i);
+           { possibleValues.push(i);}
+            console.log("possibilities for no entries",possibleValues);
     }
+    
 
     return possibleValues;
 }

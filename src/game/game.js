@@ -1,4 +1,4 @@
-import './index.css';
+import './game.css';
 import React from "react";
 import { useState } from "react";
 import setStates from './js/setStates';
@@ -34,13 +34,13 @@ function Game() {
 
   return (
     <>
-      <div className='game center'>
+      <div className='game center' >
         {/* <div className='heading'><h1>MathematTic Tac Toe</h1></div> */}
         {/* <div className='mode'>
           <button className='attack'>ATTACK</button>
           <button className='defend'>DEFEND</button>
         </div> */}
-        <button onClick={aiTurn}>Start AI</button>
+       
         <div className='turn'><h4>user Turn</h4></div>
         <div className='message center' >{message}</div>
         <div className="gameBox center" id='gameBox'>
@@ -59,7 +59,7 @@ function Game() {
             <input id="h" type="number" className="input" name="h" onChange={handleChange} value={game.h} />
             <input id="i" type="number" className="input" name="i" onChange={handleChange} value={game.i} />
           </div>
-
+          <button onClick={aiTurn} className="confirmBtn">Start AI</button>
         </div>
       
       </div>
