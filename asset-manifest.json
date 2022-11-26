@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mathmaticTic_Toe/static/css/main.d580fe65.css",
-    "main.js": "/mathmaticTic_Toe/static/js/main.7986ae5e.js",
+    "main.js": "/mathmaticTic_Toe/static/js/main.0d65779d.js",
     "static/js/787.9b12de32.chunk.js": "/mathmaticTic_Toe/static/js/787.9b12de32.chunk.js",
     "static/media/logo.svg": "/mathmaticTic_Toe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/mathmaticTic_Toe/index.html",
     "main.d580fe65.css.map": "/mathmaticTic_Toe/static/css/main.d580fe65.css.map",
-    "main.7986ae5e.js.map": "/mathmaticTic_Toe/static/js/main.7986ae5e.js.map",
+    "main.0d65779d.js.map": "/mathmaticTic_Toe/static/js/main.0d65779d.js.map",
     "787.9b12de32.chunk.js.map": "/mathmaticTic_Toe/static/js/787.9b12de32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d580fe65.css",
-    "static/js/main.7986ae5e.js"
+    "static/js/main.0d65779d.js"
   ]
 }
