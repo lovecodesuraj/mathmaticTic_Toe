@@ -25,7 +25,9 @@ const fun1 = (game, used, cell1, cell2, cell3, cell4, cell5, cell6) => {
         result = 0;
     } else {
         result = totalPossibleMoves.filter(move => move > 0 && move < 10);
-        result = result[0];
+        const index=Math.floor(Math.random()*result.length)
+        console.log("index is ",index)
+        result = result[index];
     }
 
     return result;
@@ -50,7 +52,9 @@ const fun2 = (game, used, cell1, cell2, cell3, cell4) => {
         result = 0;
     } else {
         result = totalPossibleMoves.filter(move => move > 0 && move < 10);
-        result = result[0];
+        const index=Math.floor(Math.random()*result.length)
+        console.log("index is ",index)
+        result = result[index];
     }
 
     return result;
@@ -79,7 +83,9 @@ const fun3 = (game, used, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8
         result = 0;
     } else {
         result = totalPossibleMoves.filter(move => move > 0 && move < 10);
-        result = result[0];
+        const index=Math.floor(Math.random()*result.length)
+        console.log("index is ",index)
+        result = result[index];
     }
 
     return result;
@@ -103,8 +109,21 @@ const getValue = (game, setGame, used, setUsed) => {
         },500)
         return;
      }
- 
-    for (var i = 0; i < 10; i++) {
+   
+     var i=0;
+     //first move
+     if(used.length===1){
+          if(game.a){i=6}
+          else if(game.b){i=4}
+          else if(game.c){i=4}
+          else if(game.d){i=2}
+          else if(game.e){i=0}
+          else if(game.f){i=1}
+          else if(game.g){i=2}
+          else if(game.h){i=3}
+            else {i=4}
+     }
+    for (i ; i < 10; i++) {
         if (i == 1) {
             if (!game.a) {
                 console.log("at location a")

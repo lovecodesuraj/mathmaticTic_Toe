@@ -10,7 +10,7 @@ function App() {
  
   return (
     <>
-  <BrowserRouter>
+  <BrowserRouter basename={"https://lovecodesuraj.github.io/mathmaticTic_Toe/"}>
   < Routes>
   < Route exact path='/' element={<Info />} />
   < Route exact path='/game' element={<Game />} />
