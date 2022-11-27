@@ -9,7 +9,6 @@ function Game() {
   const [used, setUsed] = useState([]);
   const [game, setGame] = useState({ a: null, b: null, c: null, d: null, e: null, f: null, g: null, h: null, i: null });
   const [message, setMessage] = useState("");
-  const [timeLeft, setTimeLeft] = useState(120);
   // const [reRender,setReRender]=useState();
 
 
@@ -19,7 +18,7 @@ function Game() {
     var value = e.target.value;
     const name = e.target.name;
     value = parseInt(value);
-    console.log(value)
+ 
     setStates(game, setGame, used, setUsed, message, setMessage, name, value);
 
   }
@@ -34,6 +33,13 @@ function Game() {
         input.readOnly = false;
       }
     })
+    console.log("use lenght h ",used.length)
+    if (used.length === 9) {
+      document.getElementsByClassName("restartBtn")[0].style.display="block";
+      setMessage("You won , AI couldn't  checkmate you")
+     
+    }
+    
   }
   const restart = (event) => {
     event.preventDefault();
@@ -42,10 +48,14 @@ function Game() {
 
   const timeOver = () => {
     setMessage("Time Over , You Lost !!!")
+    const arr = document.querySelectorAll(".input");
+    arr.forEach(input => {
+      input.readOnly = true;
+    })
     document.getElementsByClassName("restartBtn")[0].style.display="block";
   }
 
-  setTimeout(timeOver, 120000);
+  setTimeout(timeOver, 60000);
 
   // useEffect(()=>{
   //   setGame({ a: null,b: null, c: null, d: null,  e: null,f: null,g: null,h: null,i: null})

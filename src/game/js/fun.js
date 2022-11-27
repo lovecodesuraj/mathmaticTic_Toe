@@ -16,7 +16,7 @@ const fun = (cell1, cell2, used) => {
         for (var i = 1; i < 10; i++) {
             possibleValues.push(i);
         }
-        console.log("possibilities for both entries", possibleValues);
+        // console.log("possibilities for both entries", possibleValues);
 
     }
     else if (cell1) {
@@ -43,10 +43,11 @@ const fun = (cell1, cell2, used) => {
                 possibleValues.push(val);
             }
         });
-        console.log("possibilities for first entry", possibleValues);
+        // console.log("possibilities for first entry", possibleValues);
 
     }
     else if (cell2) {
+
         //for x+1+cell2>15
         for (var i = 15 - cell2; i < 10; i++) {
             possibleValues.push(i);
@@ -60,13 +61,14 @@ const fun = (cell1, cell2, used) => {
 
         if(valids.includes((15-cell2)/2)){
             possibleValues.push(parseInt((15-cell1)/2));
+            console.log("possibilities for second entry", possibleValues);
+        
         }
 
-        console.log("possibilities for second entry", possibleValues);
     }
     else {
         for (i = 1; i < 10; i++) { possibleValues.push(i); }
-        console.log("possibilities for no entries", possibleValues);
+        // console.log("possibilities for no entries", possibleValues);
     }
 
 
