@@ -39,6 +39,11 @@ const setStates= (game,setGame,used,setUsed,message,setMessage,name,value)=>{
        arr.forEach(input=>{
         input.readOnly=true;
       })
+
+     setTimeout(()=>{
+      document.getElementById("confirmBtn").click();
+     },500)
+     
        
       }
       // getValue(game,setGame,used,setUsed);

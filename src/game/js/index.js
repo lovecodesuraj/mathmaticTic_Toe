@@ -95,7 +95,7 @@ const fun3 = (game, used, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8
 
 
 
-const getValue = (game, setGame, used, setUsed) => {
+const getValue = (game, setGame, used, setUsed,setMessage) => {
    
     const winCond=checkWinCondition(game,used,setGame);
     if(winCond!=0){
@@ -103,10 +103,11 @@ const getValue = (game, setGame, used, setUsed) => {
         const cell1=document.getElementById(trio[0]).style.backgroundColor="red";
         const cell2=document.getElementById(trio[1]).style.backgroundColor="red";
         const cell3=document.getElementById(trio[2]).style.backgroundColor="red";
-        setTimeout(()=>{
-            alert("You Lost !!! Click 'OK' to replay")
-            window.location.reload();
-        },500)
+            setMessage("You Lost !!!")
+            document.getElementsByClassName("restartBtn")[0].style.display="block"
+            document.getElementsByClassName("fill")[0].style.display="none";
+                    
+      
         return;
      }
    
@@ -305,8 +306,9 @@ const getValue = (game, setGame, used, setUsed) => {
                     })
                     break;
                 } else {
-                    alert("You won there is no safe move for AI !!! Click 'OK to restart'")
-                    window.location.reload();
+                    setMessage("You won there is no safe move for AI !!!")
+                    document.getElementsByClassName("confirmBtn").style.display="block";
+                    document.getElementsByClassName("fill").style.width="0px";
                 }
             }
         }
